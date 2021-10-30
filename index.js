@@ -6,13 +6,16 @@ const ingressroutes = require('./src/routes/ingress.routes')
 const retproviderroutes = require('./src/routes/retprovider.routes')
 const centerroutes = require('./src/routes/center.routes')
 const transactionroutes = require('./src/routes/transaction.routes')
+const cors=require('cors')
 
 const express = require('express')
 
 const app = express()
 app.set('port',3000)
 
+app.use(cors())
 app.use(express.json())
+
 
 app.use('/product',productroutes)
 app.use('/category',categoryroutes)
