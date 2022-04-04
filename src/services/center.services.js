@@ -18,9 +18,9 @@ exports.getOne = async(idcen)=>{
     }
 } 
 
-exports.create=async({strnomcen,strdepartamento,strciudad,strdirección,strtelefono})=>{
+exports.create=async({strnomcen,strdepartamento,strciudad,strdireccion,strtelefono})=>{
     try {
-        const query = {strnomcen,strdepartamento,strciudad,strdirección,strtelefono};
+        const query = {strnomcen,strdepartamento,strciudad,strdireccion,strtelefono};
         const centercreate = await center.create(query)
         return centercreate
     } catch (error) {
