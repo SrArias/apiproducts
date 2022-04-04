@@ -61,8 +61,8 @@ exports.createproduct = async(req,res)=>{
 exports.updateproduct = async(req,res)=>{
     try {
         const idprod = req.query.idprod
-        const {strnomprod,intidcat,intuniprod}=req.body
-        const productdata = {idprod,strnomprod, intidcat,intuniprod}
+        const {strnomprod,intuniprod}=req.body
+        const productdata = {idprod,strnomprod,intuniprod}
         const products = await productservices.update(productdata)
         res.json({products})
     } catch (error) {
